@@ -1,0 +1,139 @@
+{% extends "layout.html" %}
+<!--POO Herança-->
+
+{% set pageId = "page-search-results" %}
+
+
+{% block title %}
+
+<title>Resultado da pesquisa</title>
+
+{% endblock  title %}
+
+
+{% block styles %}
+
+<link rel="stylesheet" href="css/search.css">
+
+
+{% endblock  styles %}
+
+
+</head>
+
+<body>
+
+    {% block container %}
+    <!--Conteudo inicio-->
+    {% include "partials/page-header.html" %}
+
+    <main>
+        <!--Incio do contéudo principal-->
+
+
+        {% if  total > 0 %}
+
+        <h4>
+            <strong> {{total}} pontos</strong> Encontrados
+        </h4>
+
+
+        {% for place in places%} <!--Estrutura de repetição-->
+        <div class="card">        <!--Cards 1 inicio-->
+
+            <!--Cards 1 inicio-->
+            <img src="{{place.image}}" alt="{{place.name}}">
+            <h1>{{place.name}}</h1>
+            <h3>{{place.items}}</h3>
+            <p>
+                {{place.city}} , {{place.state}}<br />
+                {{place.address}} , {{place.address2}} <br />
+            
+            </p>
+        </div> <!--Cards 1 Fim-->
+
+
+        {%endfor%}
+         
+
+        {% else %}
+
+        <h4><strong>Nenhum</strong> local encontado</h4>
+
+
+        {% endif %}
+
+        
+
+     
+
+    </main>
+    <!--Fim do contéudo principal-->
+
+    {% endblock container %}
+    <!--Conteudo Fim-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!DOCTYPE html>
+    <html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsividade.css">
+    </head>
+
+    <body>
+
+        <div id="">
+            <!--Inicio site-->
+
+
+        </div>
+        <!--Fim pagina-->
+
+
+
+    </body>
+
+    </html>

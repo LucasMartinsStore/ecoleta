@@ -1,0 +1,61 @@
+{% extends "layout.html" %} <!--POO Herança-->
+
+{% set pageId = "home-page" %}
+
+
+    {% block styles %}
+    <title>Ecoleta</title> 
+    <link rel="stylesheet" href="css/home-page.css">
+    <link rel="stylesheet" href="css/modal.css">
+
+    {% endblock  styles %}
+
+
+</head>
+<body>
+
+    {% block container %} <!--Conteudo inicio-->
+    <div class="container"> <!--Inicio Conteudo-->
+
+        <header > <!--Inicio Cabeçalho-->
+            <img src="image/logo.svg" alt="Logo ecoleta">
+        
+            <a href="/create-point">
+                <span></span>
+                Cadastre um ponto de coleta</a>
+        </header> <!--Fim Cabeçalho-->
+
+
+        <main>
+            <h1 class="title">Seu marketplace de coleta de resíduos</h1>
+
+            <p>
+                Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
+            </p>
+    
+            <a href="#"><span></span><strong>Pesquisar pontos de coleta</strong></a>
+        </main>
+
+
+    </div> <!--Fim conteudo-->
+
+    {% endblock container %}  <!--Conteudo Fim-->
+
+    {% block modal %} <!--Modal nunjuckts inicio-->
+
+    {% include "partials/modal.html" %}
+
+
+    {% endblock modal %} <!--Modal nunjuckts fim-->
+
+
+    {% block scripts %}
+    <script src="js/index.js"></script>
+    {% endblock scripts %}
+
+
+ 
+
+
+ 
+   
